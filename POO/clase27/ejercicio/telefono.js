@@ -15,7 +15,7 @@ var Telefono = /** @class */ (function () {
         console.log("Llamando a.... " + numero);
     };
     Telefono.prototype.prenderApagar = function () {
-        var prendido = RLS.question("¿quiere prender el telefono?(si/no): ");
+        var prendido = RLS.question("quiere prender el telefono?(si/no): ");
         if (prendido == "si") {
             this.estaPrendido = true;
             console.log("el telefono esta prendido");
@@ -32,7 +32,7 @@ var Telefono = /** @class */ (function () {
     // }
     // 
     Telefono.prototype.verBateriaActual = function () {
-        return this.bateriaActual;
+        console.log("El telefono tiene " + this.bateriaActual + "% de bateria");
     };
     Telefono.prototype.mostrarTelefono = function () {
         console.log("El telefono se encuentra " + this.estaPrendido + " con " + this.bateriaActual);

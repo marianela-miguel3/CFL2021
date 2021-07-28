@@ -35,6 +35,7 @@ while (opcion !="X"){
            break;
         }    
     }
+   opcion=RLS.question("ingrese una opcion para conocer nuestros productos(Telefono/T, TelefonoConCamara/C o TelefonoConRadio/R,X para finalizar: ").toUpperCase();
 }
 
 

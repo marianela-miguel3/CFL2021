@@ -25,11 +25,11 @@ var TelefonoConRadio = /** @class */ (function (_super) {
         return _this;
     }
     TelefonoConRadio.prototype.verFrecuenciaActual = function () {
-        this.frecuenciaActual = RLS.questionFloat("¿Cual es su frecuencia actual: ?");
+        this.frecuenciaActual = RLS.questionFloat("Cual es su frecuencia actual?: ");
         return this.frecuenciaActual;
     };
     TelefonoConRadio.prototype.mostrarTelefonoConRadio = function () {
-        console.log("El telefono se encuentra:  " + this.estaPrendido + " con:  " + this.bateriaActual + " en la frecuencia: " + this.frecuenciaActual);
+        console.log("El telefono se encuentra:  " + this.estaPrendido + " con:  " + this.bateriaActual + "% de bateria en la frecuencia: " + this.frecuenciaActual);
     };
     return TelefonoConRadio;
 }(telefono_1["default"]));

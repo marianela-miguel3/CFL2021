@@ -32,8 +32,8 @@ public prenderApagar():void{
 //     this.estaPrendido=true
 // }
 // 
-public verBateriaActual():number{
-return this.bateriaActual;
+public verBateriaActual():void{
+console.log(`El telefono tiene ${this.bateriaActual}% de bateria`);
 }
 public mostrarTelefono():void{
     console.log(`El telefono se encuentra ${this.estaPrendido} con ${this.bateriaActual}`);
