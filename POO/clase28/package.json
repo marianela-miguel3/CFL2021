@@ -4,10 +4,13 @@
   "description": "",
   "main": "Telefono.js",
   "scripts": {
-    "tarea":"tsc telefonoConCamara.ts && node telefonoConCamara.js",
+    "tarea": "tsc telefonoConCamara.ts && node telefonoConCamara.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/readline-sync": "^1.4.4"
+  }
 }
