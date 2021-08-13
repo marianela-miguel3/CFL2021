@@ -42,22 +42,34 @@ var GestorLibro = /** @class */ (function () {
         var propiedadesLibro = [];
         libros.forEach(function (libroString) {
             propiedadesLibro = libroString.split(";");
-            _this.libros.push(new Libro_1["default"](propiedadesLibro[0], propiedadesLibro[1], propiedadesLibro[2], propiedadesLibro[3], propiedadesLibro[4], propiedadesLibro[5], parseInt(propiedadesLibro[6])));
-        });
+            _this.libros.push(new Libro_1["default"](propiedadesLibro[0], propiedadesLibro[1], parseInt(propiedadesLibro[2]), propiedadesLibro[3], propiedadesLibro[4], propiedadesLibro[5], parseInt(propiedadesLibro[6])));
+        }); //parseInt me deja pasar un parametro number como string
     };
     GestorLibro.prototype.crearLibro = function () {
         var titulo = RLS.question('Ingrese el titulo: ');
         var editorial = RLS.question('Ingrese la editorial: ');
-        var anioEdicion = RLS.question('Ingrese el anio: ');
+        var anioEdicion = RLS.questionInt('Ingrese el anio: ');
+        if (anioEdicion > 2021) {
+            throw new Error("La fecha de edicion no puede ser mayor al año corriente: 2021 ");
+        }
         var genero = RLS.question('Ingrese el genero: ');
         var idioma = RLS.question('Ingrese el idioma: ');
         var autor = RLS.question('Ingrese el autor: ');
         var precio = RLS.questionInt('Ingrese el precio: ');
+        if (precio <= 0) {
+            throw new Error("El precio debe ser mayor a $0 ");
+        }
         var nuevoLibro = new Libro_1["default"](titulo, editorial, anioEdicion, genero, idioma, autor, precio);
         //FS.writeFileSync("libro.txt",(`${titulo};${editorial};${anioEdicion};${genero};${idioma};${autor};${precio}`));
         //this.libros.push(nuevoLibro);
         //console.log(FS.readFileSync("libro.txt","utf8"));
         return nuevoLibro;
+        try {
+        }
+        catch (error) {
+            console.log("ocurrio un error esperado");
+            console.log(error);
+        }
     };
     return GestorLibro;
 }());

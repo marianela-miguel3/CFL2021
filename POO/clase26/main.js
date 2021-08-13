@@ -7,6 +7,15 @@ gestor.cargarLibros("libro.txt", "\n");
 gestor.mostrarLibros();
 //menu de opciones CRUD
 var opcion = RLS.question('Ingrese una opcion, X para finalizar: ').toUpperCase();
+if (opcion != "c" && opcion != "r" && opcion != "u" && opcion != "d") {
+    throw new Error("Debe ingresar opcion C,D,U o D");
+}
+try {
+}
+catch (error) {
+    console.log("ocurrio un error esperado");
+    console.log(error);
+}
 var titulo;
 while (opcion != 'X') {
     switch (opcion) {

@@ -10,6 +10,7 @@ export default class GestorLibro {
         this.libros.push(this.crearLibro());
     }
     public findLibro(titulo:string):number{//BUSCAR
+        
         for (let i = 0; i < this.libros.length; i++) {
             if(titulo == this.libros[i].getTitulo()){
                 return i;
@@ -40,21 +41,34 @@ export default class GestorLibro {
         let propiedadesLibro:string[] = [];
         libros.forEach(libroString => {
             propiedadesLibro = libroString.split(";")
-            this.libros.push(new Libro(propiedadesLibro[0],propiedadesLibro[1],propiedadesLibro[2],propiedadesLibro[3],propiedadesLibro[4],propiedadesLibro[5],parseInt(propiedadesLibro[6])))
-        });
+            this.libros.push(new Libro(propiedadesLibro[0],propiedadesLibro[1],parseInt(propiedadesLibro[2]),propiedadesLibro[3],propiedadesLibro[4],propiedadesLibro[5],parseInt(propiedadesLibro[6])))
+        });//parseInt me deja pasar un parametro number como string
     }
     private crearLibro():Libro {
         let titulo:string = RLS.question('Ingrese el titulo: ');
         let editorial:string = RLS.question('Ingrese la editorial: ');
-        let anioEdicion:string = RLS.question('Ingrese el anio: ');
+        let anioEdicion:number = RLS.questionInt('Ingrese el anio: ');
+        if(anioEdicion>2021){
+            throw new Error("La fecha de edicion no puede ser mayor al año corriente: 2021 ");
+        }
         let genero:string = RLS.question('Ingrese el genero: ');
         let idioma:string = RLS.question('Ingrese el idioma: ');
         let autor:string = RLS.question('Ingrese el autor: ');
         let precio: number = RLS.questionInt('Ingrese el precio: ');
+        if(precio<=0){
+            throw new Error("El precio debe ser mayor a $0 ");
+        }
+
         let nuevoLibro:Libro=new Libro(titulo,editorial,anioEdicion,genero,idioma,autor,precio);
         //FS.writeFileSync("libro.txt",(`${titulo};${editorial};${anioEdicion};${genero};${idioma};${autor};${precio}`));
         //this.libros.push(nuevoLibro);
         //console.log(FS.readFileSync("libro.txt","utf8"));
         return nuevoLibro;
+        try{  
+        }catch (error){
+            console.log("ocurrio un error esperado");
+            console.log(error);
+        }
     }
+
 }

@@ -1,13 +1,13 @@
 export default class Libro {
     private titulo:string;
     private editorial:string;
-    private anioEdicion:string;
+    private anioEdicion:number;
     private genero:string;
     private idioma:string;
     private autor:string;
     private precio:number;
     
-public constructor(titulo:string,editorial:string,anioEdicion:string,genero:string,idioma:string,autor:string,precio:number) {
+public constructor(titulo:string,editorial:string,anioEdicion:number,genero:string,idioma:string,autor:string,precio:number) {
     this.titulo= titulo;
     this.editorial= editorial;
     this.anioEdicion= anioEdicion;
@@ -22,7 +22,7 @@ public constructor(titulo:string,editorial:string,anioEdicion:string,genero:stri
     public getEditorial():string{
          return this.editorial;
     }
-    public getAnioEdicion():string{
+    public getAnioEdicion():number{
          return this.anioEdicion;
     }
     public getGenero():string{
