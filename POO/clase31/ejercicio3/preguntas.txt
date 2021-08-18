@@ -1,0 +1,18 @@
+1-Npm permite a)Instalar librerias: paquetes de librerias que son funcionales al proyecto 
+en el cual trabajamos.
+              b)crear proyectos propios a partir de la instalacion de package.json donde podemos 
+              ver todas las dependencias asociadas al mismo, crear tareas y guardar con cierta
+              informacion pertinente como titulo, autor, etc.
+2-Al utilizar un lenguaje con tipos el codigo resulta mas legible a un tercero, hay menos margen 
+de error y mas eficiencia al momento de encotrarlos.
+3-Las variables internas son los atributos de las clases, son internas porque solo se pueden 
+modificar mediante funciones dentro de la misma.
+4-Composicion se trata de una clase mas compleja compuesta por otras clases mas simples en donde
+cada clase tiene sus propios atributos y funciones, sin embargo en la herencia una clase padre 
+o superClase hereda sus atributos a una clase hija que puede tener la misma funcionalidad o no.
+En la herencia se puede dar polimorfismo, es decir, una funcion de la clase padre es heredada 
+por la clase hija, donde se respeta la firma (nombre,orden-cantidad y tipo de parametros,tipo 
+de retorno) de la funcion pero tiene una distinta logica y funcionalidad interna.
+5-El mecanismo que provee typescript para evitar parametros invalidos es el tryCatch 
+donde se atrapa el error de manera tal que el usuario entienda cual fue el error rapidamente y 
+el programa no se rompa.

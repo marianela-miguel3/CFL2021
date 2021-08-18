@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var PistaDeAudio_1 = require("./PistaDeAudio");
+var PlayList_1 = require("./PlayList");
+var playlist = new PlayList_1["default"]();
+var pistaDeAudio1 = new PistaDeAudio_1["default"]("las olas y el viento", "manzanero");
+var pistaDeAudio2 = new PistaDeAudio_1["default"]("los dias sin ti", "shakira");
+playlist.agregarLista(pistaDeAudio1);
+playlist.agregarLista(pistaDeAudio2);
+playlist.cantidadPistas();
+playlist.setDuracion();
+playlist.mostrarPistas();

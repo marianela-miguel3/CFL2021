@@ -1,0 +1,16 @@
+{
+  "name": "clase28",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Telefono.js",
+  "scripts": {
+    "tarea": "tsc telefonoConCamara.ts && node telefonoConCamara.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/readline-sync": "^1.4.4"
+  }
+}
