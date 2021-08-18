@@ -16,12 +16,12 @@ var PistaDeAudio = /** @class */ (function () {
     PistaDeAudio.prototype.getId = function () {
         return this.id;
     };
+    PistaDeAudio.prototype.getInterprete = function () {
+        return this.interprete;
+    };
     PistaDeAudio.prototype.aleatorio = function (mayorValor, menorValor) {
         return (Math.random() * (mayorValor + 1 - menorValor) + menorValor);
         //toFixed(1);//este me recorta a la cantidad de decimales que quiero pero retorna un string
-    };
-    PistaDeAudio.prototype.getInterprete = function () {
-        return this.interprete;
     };
     return PistaDeAudio;
 }());

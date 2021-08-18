@@ -10,7 +10,7 @@ export default class PistaDeAudio implements Pista {
     this.interprete=interprete;
     this.id=Math.floor(Math.random() * 100);
   }
-  public setDuracion(): number {
+  public getDuracion(): number {
     this.duracion=this.aleatorio(1,3);
     return this.duracion;
   }
