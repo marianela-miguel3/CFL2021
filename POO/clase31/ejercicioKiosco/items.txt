@@ -1,0 +1,8 @@
+cigarrillos;110;50
+caramelos;2;80
+chupetin;10;25
+galletitas;70;60
+chicles;5;33
+yerba;250;37
+agua;100;25
+paniales;200;10
