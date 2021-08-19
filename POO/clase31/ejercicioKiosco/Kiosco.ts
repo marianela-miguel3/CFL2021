@@ -57,7 +57,7 @@ export default class Kiosco {
     console.log(`Su compra se realizo con exito: subtotal: $ ${costo}`);
     FS.appendFileSync("ventaItems.txt",`Queda en stock un total de ${stock} ${compra}\n`);
     if (stock==0){
-          this.items.splice(posicion, 1);
+      this.items.splice(posicion, 1);
     }
     compra = RLS.question("Si desea seguir comprando ingrese otro producto, x para finalizar: ").toLowerCase();
     }
