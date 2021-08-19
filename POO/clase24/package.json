@@ -1,0 +1,16 @@
+{
+  "name": "array",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Lampara.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "MM",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/readline-sync": "^1.4.4"
+  }
+}

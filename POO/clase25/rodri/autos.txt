@@ -1,0 +1,3 @@
+ABC123;Ford;Fiesta;2012;3;Combustion interna
+DEF456;Renault;Duster;2015;5;Combustion interna
+VOLTE11;Volt Motors;E1;2019;3;Electrico

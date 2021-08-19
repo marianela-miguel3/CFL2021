@@ -1,0 +1,14 @@
+.visible {
+    width:100%;
+    background-color: red;
+    display:none;
+}
+#bomba {
+    font-size: 80px;
+    color: black;
+}
+.mostrar{
+    display:block;
+}
+
+

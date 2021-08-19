@@ -1,0 +1,20 @@
+{
+  "name": "ejercicio1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "usoDePKGAsciiChart.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "graphSin": "cls && node usoDePKGAsciiChart.js"
+  },
+  "author": "MM",
+  "keywords": [
+    ""
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "asciichart": "^1.5.25",
+    "chalk": "^4.1.1",
+    "readline-sync": "^1.4.10"
+  }
+}

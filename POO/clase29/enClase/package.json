@@ -1,0 +1,13 @@
+{
+  "name": "enclase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "SmartPhone.js",
+  "scripts": {
+    "enClase":"tsc SmartPhone.ts && node SmartPhone.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

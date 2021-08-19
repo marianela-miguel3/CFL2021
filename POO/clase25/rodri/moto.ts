@@ -1,0 +1,1 @@
+import Vehiculo from "./vehiculo";

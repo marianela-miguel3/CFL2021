@@ -1,0 +1,37 @@
+body {
+    background:linear-gradient(-225deg, #77FFD2 0%, #6297DB 48%, #1EECFF 100%);;
+}
+
+h1 {
+    font-size: 30px;
+    text-transform: capitalize;
+    font-family: 'Patrick Hand', cursiva;
+}
+
+h3 {
+    color: olivedrab;
+    font-style: initial;
+    font-size: 15px;
+    text-transform: lowercase;
+}
+
+p {
+    font-size: 17px;
+    color: brown;
+    font-style: italic;
+}
+.negrita {
+    font-style: italic;
+    font-size: 20px;
+}
+.color {
+    font-family:'Roboto', sans-serif;
+    color:rgb(75, 11, 24);
+    text-align: center;
+}
+.fondo:hover {
+background-color: blueviolet;
+}
+.hidden {
+    display: none;
+}

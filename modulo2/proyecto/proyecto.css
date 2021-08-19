@@ -1,0 +1,12 @@
+.estilo {
+    background-color: burlywood;
+    color: black;
+    font-size: 25px;
+}
+.principal {
+    background-color: coral;
+    text-align: center;
+}
+.display {
+    display: inline;
+}

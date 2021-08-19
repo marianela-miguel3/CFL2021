@@ -1,0 +1,19 @@
+h1,h2 {
+    color: red;
+}
+body {
+    background-color: gray;
+}
+.bold {
+    font-weight: bold;
+}
+#tamañoImagen {
+    width: 300px;
+}
+#centrar {
+    align-content: center;
+    width: 500px;
+    background-color: rgb(87, 104, 71);
+    display: flex;
+    justify-content: center;
+}

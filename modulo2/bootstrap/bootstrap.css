@@ -1,0 +1,8 @@
+.centrar {
+    margin:25rem;
+    background-color: crimson;
+    border:solid rgb(24, 13, 5) 2px;
+}
+body {
+    background-color: bisque;
+}

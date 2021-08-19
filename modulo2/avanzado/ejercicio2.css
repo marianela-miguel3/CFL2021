@@ -1,0 +1,23 @@
+body {
+    background-color: coral;
+}
+div ul {
+    background-color: brown;
+    color: darkblue;
+}
+p.estilo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 35px;
+    color: darkgreen;
+}
+#unico {
+    background-color: darkmagenta;
+}
+.distinta {
+    display: flex;
+}
+p~h5 {
+    background-color: darkorange;
+    border: solid;
+    border: 5px;
+}

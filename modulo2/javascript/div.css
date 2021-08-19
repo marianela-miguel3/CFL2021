@@ -1,0 +1,14 @@
+.oculto {
+     display: none;
+}
+.estilo {
+    font-size: 50px;
+    background-color: brown;
+    color: cornsilk;
+}
+
+.otroEstilo {
+    background-color: darkblue;
+    color: cornsilk;
+    font-size: 80px;
+}
