@@ -16,5 +16,13 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marianela-miguel3/CFL2021.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marianela-miguel3/CFL2021/issues"
+  },
+  "homepage": "https://github.com/marianela-miguel3/CFL2021#readme",
   "description": ""
 }
