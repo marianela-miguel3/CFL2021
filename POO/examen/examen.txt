@@ -1,0 +1,133 @@
+import ArticuloLectura from "./ArticuloLectura";
+import * as RLS from "readline-sync";
+class Biblioteca{
+    private elementos:ArticuloLectura[];
+    private nombreBiblioteca:string;
+    private direccion:string;
+
+    public constructor(){
+        this.elementos=[];
+        this.nombreBiblioteca=this.nombreBiblioteca;
+        this.direccion=this.direccion;
+    }
+
+    public insertar(a:ArticuloLectura):boolean{//ingreso un nuevo articulo por parametro y lo agrego al ya existente, si es que aun no existe
+        let i:number=0;
+        for(i=0;i<this.elementos.length;i++){
+            if(a=this.elementos[i]){
+                console.log(`El articulo ${a} ya se encuentra ingresado`);
+            return false;
+            }else{
+                this.elementos.push(a);
+            }
+            return true;
+            }
+    }
+
+    public buscar(isbn:number):ArticuloLectura{//busco un articulo por su identificador y me retorno ese articulo
+        let posicion:number = this.findArticulo(isbn);
+        for (let i = 0; i < this.elementos.length; i++) {
+                if(isbn== this.elementos[i].getId()){
+                return this.elementos[posicion];
+                }
+        }
+    }
+    public modificarPaginas(isbn:number):boolean{//modifico la cantidad de paginas del articulo
+        let cantidad:number;
+        for (let i = 0; i < this.elementos.length; i++) {
+            if(isbn== this.elementos[i].getId()){
+                cantidad=RLS.questionInt("Ingrese la cantidad de paginas por la que quiere que se cambie: ");
+                return true;
+            }
+        }
+    }
+    public eliminar(id:number):boolean{//elimino un articulo y me retorna true si lo elimino con exito
+        let posicion:number = this.findArticulo(id);
+            if (posicion != -1) {
+                this.elementos.splice(posicion,1);
+                console.log("el articulo se elimino con exito");
+            }
+            return true;
+    }
+    private findArticulo(isbn:number):number{//busco un articulo por su identificador y me devuelve su posicion en el arreglo de articulos
+        for (let i = 0; i <this.elementos.length; i++) {
+            if(isbn== this.elementos[i].getId()){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public buscarPorAutor(a:string):ArticuloLectura[]{//no lo pude hacer, busco un articulo por autor y me devuelve un arreglo de todos los articulos de ese mismo autor
+        let arregloAutor:ArticuloLectura[];
+        //let posicion:number;
+        for (let i = 0; i <this.elementos.length; i++) {
+            if(a==this.elementos[i].getAutor()){
+            return arregloAutor;
+            }
+        }
+    }
+
+}
+export default class ArticuloLectura{
+    private ISBN:number;
+    private autor:string;
+    private editorial:string;
+    private titulo:string;
+    protected cantidadPaginas:number;
+
+    public constructor(autor:string,titulo:string){
+        this.ISBN=Math.floor(Math.random() * 100000);
+        this.autor=autor;
+        this.editorial=this.editorial;
+        this.titulo=titulo;
+        this.cantidadPaginas=this.cantidadPaginas;
+    }
+    public setCantidadPaginas(cantidad:number):void{//modifico por parametro la cantidad de paginas
+        this.cantidadPaginas=cantidad;
+    }
+    public getTitulo():string{
+        return this.titulo;
+    }
+    public getId():number{
+        return this.ISBN;
+    }
+    public getAutor():string{
+        return this.autor;
+    }
+}
+import ArticuloLectura from "./ArticuloLectura";
+
+export default class Libro extends ArticuloLectura{
+    public constructor(autor:string,titulo:string){
+        super(autor,titulo)
+    }
+
+    public setCantidadPaginas(cantidad:number):void{
+        this.cantidadPaginas=cantidad;
+    }
+}
+import ArticuloLectura from "./ArticuloLectura";
+
+export default class Revista extends ArticuloLectura{
+    private articulos:string[];
+    public constructor(autor:string,titulo:string){
+        super(autor,titulo)
+    }
+    public setCantidadPaginas(cantidad:number):void{
+        if(cantidad<50){
+        this.cantidadPaginas=cantidad;
+        }else if (cantidad>50){
+            throw new Error("Excede la cantidad de paginas");
+        }
+        try{
+        }catch (error){
+          console.log("ocurrio un error esperado");
+          console.log(error);
+        }
+    }
+    
+    public agregarRevista(articulo:string){
+        this.articulos.push(articulo);
+    }
+}
