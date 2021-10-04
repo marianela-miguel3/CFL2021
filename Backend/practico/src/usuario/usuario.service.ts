@@ -7,18 +7,11 @@ import { PublicacionService } from 'src/publicacion/publicacion.service';
 @Injectable()
 export class UsuarioService {
     private usuarios:Usuario[]=[];
-    //private posts:Publicacion[];
     
     public constructor(private readonly publicacionService:PublicacionService){
         this.loadUsuarios();
-        //this.posts=[];
     }
 
-
-    // private cargarUsuarios(){
-    //     let archivo=FS.readFileSync(`usuarios.csv`,`utf-8`);
-    //     this.usuarios=archivo.split(`\r\n`).map(linea=> linea.split(`,`)).map(dato=>new Usuario(parseInt(dato[0]),dato[1],dato[2],dato[3]));
-    // }
     public getUsuario(id:number){
         return this.usuarios.find(usuario=>usuario.getId()==id);
     }
@@ -27,22 +20,9 @@ export class UsuarioService {
     }
     public getUsuariosPost(id):any[]{
         return this.publicacionService.getPublicacionUser(id);
-        // let arrayPostUser:[]=[];
-        // for(let i=0;i<this.usuarios.length;i++){
-        //     if(this.publicacionService.getPublicacionUser(id)==id){
-        //         arrayPostUser.push(this.publicaciones[i]);
-        //     }
-        // }
-        // return arrayPostUser;
 
     }
    
-    // private guardarDatosUsuarios():void{
-    //     let datos:string=``;
-    //     for (let usuario of this.usuarios) {
-    //         datos+=`\r\n${usuario.getId()},${usuario.getNombre()},${usuario.getEmail()},${usuario.getDireccion()`;
-    //     }
-    //     FS.writeFileSync(``,datos.substr(2));
     public create(user:any){
         const usuario=new Usuario(user["id"],user["nombre"],user["email"],user["direccion"]);
         if(usuario.getId() && usuario.getNombre()&& usuario.getEmail() && usuario.getDireccion()) {
@@ -80,7 +60,6 @@ public modificarUsuario(id:number, user:any):boolean{
     return false
 }
 
-
     private loadUsuarios(): void{
         let archivo = FS.readFileSync('usuarios.csv', 'utf8');
         const elementos = archivo.split('\n')
@@ -90,6 +69,5 @@ public modificarUsuario(id:number, user:any):boolean{
         elementos[i][1], (elementos[i][2]),(elementos[i][3]) );
         this.usuarios.push(usuario);
         }
-        //console.log(this.usuarios);
     }
 }

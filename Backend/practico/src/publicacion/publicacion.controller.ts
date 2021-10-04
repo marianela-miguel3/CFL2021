@@ -14,10 +14,7 @@ export class PublicacionController {
     public getPublicacionId(@Param(`id`)id):Publicacion{
         return this.publicacionService.getPublicacionId(parseInt(id));
     }
-    // @Get(`user/:userId`)
-    // public getPublicacionUser(@Param(`userId`)userId):Publicacion[]{
-    //     return this.publicacionService.getPublicacionUser(parseInt(userId));
-    // }
+
     @Post()
     create(@Body() publicacion:any):string{
         return this.publicacionService.create(publicacion);

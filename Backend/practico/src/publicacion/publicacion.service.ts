@@ -72,8 +72,6 @@ export class PublicacionService {
         parseInt(elementos[i][1]),(elementos[i][2]),(elementos[i][3]) );
         this.publicaciones.push(publicacion);
         }
-        //console.log(this.usuarios);
     }
-
 
 }
