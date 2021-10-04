@@ -1,0 +1,64 @@
+.spam{
+    color: lightcoral;
+    font-family: build;
+}
+.spam2{
+    color:peru;
+}
+.input{
+    width: 157px;
+    height: 32px;
+}
+.contenido{
+    background-color:coral;
+    margin-left: 33px;
+    border: 1px solid #000;
+    text-align: left;
+}
+.button{
+    width: 233px;
+    color: crimson;
+    background-color: antiquewhite;
+    border-color:sandybrown;
+}
+.div1{
+    padding-left: 577px;
+    background-color:khaki;
+    margin-left: 60px;
+}
+.div2{
+    background-color:khaki;
+    padding-left: 555px;
+    margin-left: 60px;
+} 
+.div3{
+    background-color: lightsalmon;
+}
+.div4{
+    padding-left: 128px;
+}
+.div5{
+    padding-left: 44px;
+}
+.parrafo{
+    margin-left: 60px;
+}
+.encabezadoTabla{
+    margin-bottom: 2px;
+}
+.borde{
+    border: 1px solid #000;
+}
+.botonMedio{
+    margin-right: 278px;
+}
+.margen{
+    margin-top: 20px;
+}
+.margenTop{
+    margin-top: 18px;
+}
+.cabezaTabla{
+    color: sienna;
+    background-color: peachpuff;
+}

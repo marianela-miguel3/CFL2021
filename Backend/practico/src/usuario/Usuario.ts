@@ -4,6 +4,7 @@ private nombre:string;
 private email:string;
 private direccion:string;
 
+
 public constructor(id:number,nombre:string,email:string,direccion:string){
 this.id=id;
 this.nombre=nombre;
@@ -32,7 +33,7 @@ public setNombre(nombre:string):void{
 public setEmail(email:string):void{
     this.email=email;
 }
-public setDirecion(direccion:string):void{
+public setDireccion(direccion:string):void{
     this.direccion=direccion;
 }
 }
