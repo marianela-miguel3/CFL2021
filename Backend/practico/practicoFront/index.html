@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios-Publicaciones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./practico.css">
+</head>
+<body>
+    <p class="div1">Usuarios</p>
+    <div>
+        Ingrese el <spam class="spam">Id</spam><input class="input" id="inputId"></input>
+        Ingrese el <spam class="spam">Nombre</spam><input class="input" id="inputNombre"></input>
+        Ingrese el <spam class="spam">Email</spam><input class="input" id="inputEmail"></input>
+        Ingrese la <spam class="spam">Direccion</spam><input class="input" id="inputDireccion"></input>  
+    </div>
+    <p class="div2 margenTop">Publicaciones</p>
+    <div>
+        Ingrese el <spam class="spam">Id de Usuario</spam><input class="input" id="inputUserId"></input>
+        Ingrese el <spam class="spam">Id</spam><input class="input" id="inputIdPost"></input>
+        Ingrese el <spam class="spam">Titulo</spam><input class="input" id="inputTitulo"></input>
+        Ingrese el <spam class="spam">Cuerpo de Post</spam><input class="input" id="inputCuerpo"></input>
+        
+    </div>
+    <div class="container margenTop">
+        <div class="row">
+          <div class="col"><button class="button" id="agregarUsuario">Agregar Usuario</button></div>
+          <div class="col"><button class="button" id="delUsuario">Eliminar Usuario</button></div>
+          <div class="col"><button class="button" id="mostrarUsuarios">Ver Usuarios</button></div>
+          <div class="col"><button class="button" id="buscarUser">Buscar Usuario</button></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col"><button class="button" id="agregarPublicacion">Agregar Publicacion</button></div>
+          <div class="col"><button class="button" id="delPost">Eliminar Publicacion</button></div>
+          <div class="col"><button class="button" id="mostrarPublicaciones">Ver Publicaciones</button></div>
+          <div class="col"><button class="button" id="buscarPost">Buscar Publicacion</button></div>
+        </div>           
+    </div>
+    <div class="container margen">
+        <div class="row">
+        <div class="col"><button class="button" id="modificarUsuario">Modificar Usuario</button></div>
+        <div class="col"><button class="button botonMedio" id="modificarPost">Modificar Publicacion</button></div>
+        <div class="col div5"><button class="button" id="buscarUserPost">Buscar <spam class="spam2"> Publicaciones</spam> de un <spam class="spam2">Usuario</spam></button></div>
+    </div>
+  
+    </div>
+        <table class="contenido">
+            <p class="encabezadoTabla">Usuarios</p>
+            <thead class="cabezaTabla">
+                <td>Id/</td>
+                <td>Nombre/</td>
+                <td>Email/</td>
+                <td>Direccion/</td>
+            </thead>
+            <tbody class="borde" id="contenido"></tbody>
+        </table>
+    </div>
+
+    <div>
+    <table class="contenido">
+        <p class="encabezadoTabla">Publicaciones</p>
+        <thead class="cabezaTabla">
+            <td>UserId/</td>
+            <td>Id/</td>
+            <td>Titulo/</td>
+            <td>Cuerpo/</td>
+        </thead>
+        <tbody class="borde" id="contenido2"></tbody>
+    </table>
+    </div>
+    <div id="contenido3"></div>
+    <div id="contenido4"></div>
+    
+<script src="./usuarios.js"></script>
+</body>
+</html>
